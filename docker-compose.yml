@@ -15,7 +15,6 @@ services:
     env_file: .env
     volumes:
       - static:/static
-      - media:/media
   frontend:
     env_file: .env
     image: mangeko/kittygram_frontend
