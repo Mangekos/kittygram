@@ -6,14 +6,12 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
-dotenv_path = Path('/kittygram/.env')
-load_dotenv(dotenv_path=dotenv_path)
-# one more try
+
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(' ')
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
