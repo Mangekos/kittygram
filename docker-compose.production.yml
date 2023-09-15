@@ -29,7 +29,7 @@ services:
     image: mangeko/kittygram_gateway
     env_file: .env
     ports:
-      - 9000:80
+      - ${NGINX_PORT}:${HOST_PORT}
     volumes:
       - static:/static
       - media:/media
